@@ -1,18 +1,4 @@
 ﻿//First task calculator
-/*Задание 1
-Напишите программу - консольный калькулятор.
-Создайте две переменные с именами operand1 и operand2.
-Задайте переменным некоторые произвольные значения.
-Предложите пользователю ввести знак арифметической операции.
-Примите значение, введенное пользователем, и поместите его в строковую переменную
-sign.
-Для организации выбора алгоритма вычислительного процесса, используйте
-переключатель switch.
-Выведите на экран результат выполнения арифметической операции.
-В случае использования операции деления, организуйте проверку попытки деления на
-ноль.
-И если таковая имеется, то отмените выполнение арифметической операции и
-уведомите об ошибке пользователя.*/
 
 /*Console.WriteLine("Enter first operand");
 double operand1 = double.Parse(Console.ReadLine());
@@ -55,17 +41,7 @@ switch (sign) {
     }*/
 
 //Second task numerical interval
-/*Задание 2
-Напишите программу определения, попадает ли указанное пользователем число от 0 до
-100 в числовой промежуток [0 - 14] [15 - 35] [36 - 50][50 - 100].
-Если да, то укажите, в какой именно промежуток.
-Если пользователь указывает число, не входящее ни в один из имеющихся числовых
-промежутков, то выводится соответствующее сообщение.Задание 2
-Напишите программу определения, попадает ли указанное пользователем число от 0 до
-100 в числовой промежуток [0 - 14] [15 - 35] [36 - 50][50 - 100].
-Если да, то укажите, в какой именно промежуток.
-Если пользователь указывает число, не входящее ни в один из имеющихся числовых
-промежутков, то выводится соответствующее сообщение.*/
+
 /* int limitNumber1 = 0;
  int limitNumber2 = 100;
 
@@ -85,15 +61,8 @@ if (number >= 36 && number <= 50) Console.WriteLine("The number is included in t
 
 if (number >= 50 && number <= 100) Console.WriteLine("The number is included in the interval from 50 to 100");*/
 
-//Third task translater
 
-/*Задание 3
-Напишите программу русско-английский переводчик.
-Программа знает 10 слов о погоде.
-Требуется, чтобы пользователь вводил слово на русском языке, а программа давала ему
-перевод этого слова на английском языке.
-Если пользователь ввел слово, для которого отсутствует перевод, то следует вывести
-сообщение, что такого слова нет.*/
+//Third task translater
 
 
 /*теплый              warm
@@ -107,7 +76,7 @@ if (number >= 50 && number <= 100) Console.WriteLine("The number is included in 
 влажно              damp
 жарко               hot*/
 
-Console.WriteLine(@"Enter word:
+/*Console.WriteLine(@"Enter word:
                     теплый              warm
                     холодный            cold
                     ветренный           windy
@@ -145,5 +114,38 @@ switch (str)
     default: Console.WriteLine("Unknown word");
             break;
 }
+*/
+
+//Fourth taks even number
+
+
+
+//Firs way
+
+Console.WriteLine("Enter number1: ");
+
+int number1 = int.Parse(Console.ReadLine());
+
+if (number1 % 2 == 0) Console.WriteLine("This is even number:");
+else Console.WriteLine("this is not even number");
+
+//Second way
+
+Console.WriteLine("Enter number2: ");
+
+int number2 = int.Parse(Console.ReadLine());
+
+int remainder = number2 % 10;
+
+switch (remainder)
+{
+    case 0: case 2: case 4: case 6: case 8: Console.WriteLine("This is even number:");
+        break;
+        default: Console.WriteLine("this is not even number");
+        break ;
+
+}
+
+
 
 
