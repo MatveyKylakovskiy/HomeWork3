@@ -66,8 +66,8 @@ switch (sign) {
 Если да, то укажите, в какой именно промежуток.
 Если пользователь указывает число, не входящее ни в один из имеющихся числовых
 промежутков, то выводится соответствующее сообщение.*/
-const int limitNumber1 = 0;
-const int limitNumber2 = 100;
+/* int limitNumber1 = 0;
+ int limitNumber2 = 100;
 
 Console.WriteLine($"Enter integer number to check from {limitNumber1} to {limitNumber2}");
 
@@ -83,4 +83,67 @@ if (number >= 15 && number <= 35) Console.WriteLine("The number is included in t
 
 if (number >= 36 && number <= 50) Console.WriteLine("The number is included in the interval from 36 to 50");
 
-if (number >= 50 && number <= 100) Console.WriteLine("The number is included in the interval from 50 to 100");
+if (number >= 50 && number <= 100) Console.WriteLine("The number is included in the interval from 50 to 100");*/
+
+//Third task translater
+
+/*Задание 3
+Напишите программу русско-английский переводчик.
+Программа знает 10 слов о погоде.
+Требуется, чтобы пользователь вводил слово на русском языке, а программа давала ему
+перевод этого слова на английском языке.
+Если пользователь ввел слово, для которого отсутствует перевод, то следует вывести
+сообщение, что такого слова нет.*/
+
+
+/*теплый              warm
+холодный            cold
+ветренный           windy
+штиль               calm
+солнечно            sunny
+пасмурно            Mainly cloudy
+дождливо            it is rainy
+сухо                dry
+влажно              damp
+жарко               hot*/
+
+Console.WriteLine(@"Enter word:
+                    теплый              warm
+                    холодный            cold
+                    ветренный           windy
+                    штиль               calm
+                    солнечно            sunny
+                    пасмурно            Mainly cloudy
+                    дождливо            it is rainy
+                    сухо                dry
+                    влажно              damp
+                    жарко               hot");
+string str = Console.ReadLine();
+
+switch (str)
+{
+    case "теплый": Console.WriteLine("warm");
+        break;
+    case "холодный": Console.WriteLine("cold");
+        break;
+    case "ветренный": Console.WriteLine("windy");
+        break;
+    case " штиль": Console.WriteLine("calm");
+        break;
+    case "солнечно": Console.WriteLine("sunny");
+        break;
+    case "пасмурно": Console.WriteLine("Mainly cloudy");
+        break;
+    case "дождливо": Console.WriteLine("it is rainy");
+        break;
+    case "сухо": Console.WriteLine("dry");
+        break;
+    case "влажно": Console.WriteLine("damp");
+        break;
+    case "жарко": Console.WriteLine("hot");
+        break;
+    default: Console.WriteLine("Unknown word");
+            break;
+}
+
+
